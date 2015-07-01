@@ -1,0 +1,16 @@
+<div class="container">
+
+  <div ng-include="'components/navbar/navbar.html'"></div>
+
+  <div class="text-center">
+    <h1>Contacts</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 col-md-4" ng-repeat="contact in mainCtrl.contacts track by $index">
+      <div contact-detail current-contact="contact"></div>
+      <a ui-sref="add" ng-click="mainCtrl.editing(contact, $index)"> Edit </a>
+    </div>
+  </div>
+
+</div>

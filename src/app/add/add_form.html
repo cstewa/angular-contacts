@@ -1,0 +1,16 @@
+  <form ng-submit="formCtrl.submit()">
+    First Name:
+    <input type="text" name="input" ng-model="formCtrl.contact.first_name">
+    Last Name:
+    <input type="text" name="input" ng-model="formCtrl.contact.last_name">
+    Description:
+    <input type="text" name="input" ng-model="formCtrl.contact.description">
+    Phone:
+    <input type="text" name="input" ng-model="formCtrl.contact.phone">
+    Email:
+    <input type="text" name="input" ng-model="formCtrl.contact.email">
+    <input ng-show="!formCtrl.isEditing" type="submit" id="submit" value="Add" />
+  </form>
+  <span us-spinner spinner-key="spinner-1"></span>
+  <button ng-show="formCtrl.isEditing" ng-click="formCtrl.save()"> Save </button>
+  <button ng-show="formCtrl.isEditing" ng-click="formCtrl.cancel()"> Cancel </button>
